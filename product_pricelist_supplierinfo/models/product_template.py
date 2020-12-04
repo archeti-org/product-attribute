@@ -19,6 +19,7 @@ class ProductTemplate(models.Model):
             product = product.browse(product_id)
         if rule.no_supplierinfo_min_quantity:
             quantity = 1.0
+        date = date.date() if date else None
         seller = product._select_seller(
             partner_id=rule.filter_supplier_id, quantity=quantity, date=date)
         if seller:
