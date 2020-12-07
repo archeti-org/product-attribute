@@ -4,6 +4,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import fields, models, tools
+import datetime
 
 
 class ProductTemplate(models.Model):
@@ -12,6 +13,7 @@ class ProductTemplate(models.Model):
     def _get_supplierinfo_pricelist_price(
             self, rule, date=None, quantity=None, product_id=None):
         """Method for getting the price from supplier info."""
+        print('_get_supplierinfo_pricelist_price')
         self.ensure_one()
         price = 0.0
         product = self.product_variant_id
@@ -19,7 +21,8 @@ class ProductTemplate(models.Model):
             product = product.browse(product_id)
         if rule.no_supplierinfo_min_quantity:
             quantity = 1.0
-        date = date.date() if date else None
+        date = date.date() \
+            if date and not isinstance(date, datetime.date) else date
         seller = product._select_seller(
             partner_id=rule.filter_supplier_id, quantity=quantity, date=date)
         if seller:
