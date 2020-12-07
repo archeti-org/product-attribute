@@ -13,7 +13,6 @@ class ProductTemplate(models.Model):
     def _get_supplierinfo_pricelist_price(
             self, rule, date=None, quantity=None, product_id=None):
         """Method for getting the price from supplier info."""
-        print('_get_supplierinfo_pricelist_price')
         self.ensure_one()
         price = 0.0
         product = self.product_variant_id
