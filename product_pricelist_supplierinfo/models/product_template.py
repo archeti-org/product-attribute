@@ -4,7 +4,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import fields, models, tools
-import datetime
+from datetime import datetime
 
 
 class ProductTemplate(models.Model):
@@ -20,8 +20,8 @@ class ProductTemplate(models.Model):
             product = product.browse(product_id)
         if rule.no_supplierinfo_min_quantity:
             quantity = 1.0
-        date = date.date() \
-            if date and not isinstance(date, datetime.date) else date
+        date = datetime.strptime(datetime.strftime(date, '%Y-%m-%d'),
+                                 '%Y-%m-%d').date() if date else None
         seller = product._select_seller(
             partner_id=rule.filter_supplier_id, quantity=quantity, date=date)
         if seller:
