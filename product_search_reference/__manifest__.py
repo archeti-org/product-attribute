@@ -18,18 +18,16 @@
 #
 ##############################################################################
 {
-    'name': 'Products Search Reference',
+    'name': 'Products Search Supplier Reference',
     'version': '0.1',
     'author': 'Tiny',
     'category': 'Generic Modules/Inventory Control',
-    'depends': ['product'],
+    'depends': ['product', 'purchase'],
     'init_xml': [],
     'demo_xml': [],
     'update_xml': ['product_view.xml'],
     'description': '''
-    Add search by partner reference on product
+    Add search by supplier reference on product
     ''',
-    'installable': False,
+    'installable': True,
 }
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
-
