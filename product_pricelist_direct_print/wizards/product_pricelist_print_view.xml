@@ -128,6 +128,7 @@
         <field name="name">Price List</field>
         <field name="res_model">product.pricelist.print</field>
         <field name="binding_model_id" ref="product.model_product_pricelist" />
+        <field name="view_id" ref="product_pricelist_direct_print.view_product_pricelist_print"/>
         <field name="view_mode">form</field>
         <field name="target">new</field>
     </record>
