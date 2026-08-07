@@ -9,6 +9,11 @@
                     name="groups"
                 >product_cost_security.group_product_cost</attribute>
             </xpath>
+            <xpath expr="//label[@for='standard_price']" position="attributes">
+                <attribute
+                    name="groups"
+                >product_cost_security.group_product_cost</attribute>
+            </xpath>
             <xpath expr="//field[@name='standard_price']" position="attributes">
                 <attribute
                     name="groups"
