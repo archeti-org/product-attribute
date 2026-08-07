@@ -7,9 +7,7 @@
             <xpath expr="//div[@name='standard_price_uom']" position="attributes">
                 <attribute
                     name="groups"
-                    separator=","
-                    add="product_cost_security.group_product_cost"
-                />
+                >product_cost_security.group_product_cost</attribute>
             </xpath>
         </field>
     </record>
