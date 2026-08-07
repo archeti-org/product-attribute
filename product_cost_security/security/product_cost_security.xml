@@ -11,7 +11,6 @@
     -->
     <record model="res.groups" id="group_product_cost">
         <field name="name">Read</field>
-        <field name="category_id" ref="module_category" />
         <field name="users" eval="[Command.link(ref('base.user_root'))]" />
     </record>
     <!--
@@ -19,7 +18,6 @@
     -->
     <record model="res.groups" id="group_product_edit_cost">
         <field name="name">Edit</field>
-        <field name="category_id" ref="module_category" />
         <field
             name="implied_ids"
             eval="[Command.link(ref('product_cost_security.group_product_cost'))]"
