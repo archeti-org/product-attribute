@@ -7,4 +7,4 @@ class ProductTemplate(models.Model):
     _inherit = ["product.template", "product.cost.security.mixin"]
 
     # Inherited fields
-    standard_price = fields.Float(groups="product_cost_security.group_product_cost")
+    #standard_price = fields.Float(groups="product_cost_security.group_product_cost")
