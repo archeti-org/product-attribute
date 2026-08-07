@@ -10,7 +10,7 @@
     add fields to views with this group defined as field attribute.
     -->
     <record model="res.groups" id="group_product_cost">
-        <field name="name">Read</field>
+        <field name="name">Read product Cost</field>
         <field name="user_ids" eval="[Command.link(ref('base.user_root'))]" />
     </record>
     <!--
