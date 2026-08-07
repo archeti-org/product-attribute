@@ -4,7 +4,6 @@ from odoo import fields, models
 
 
 class ProductTemplate(models.Model):
-    _name = "product.template"
     _inherit = ["product.template", "product.cost.security.mixin"]
 
     # Inherited fields
