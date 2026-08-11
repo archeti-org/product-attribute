@@ -38,6 +38,11 @@
                     name="groups"
                 >product_cost_security.group_product_cost</attribute>
             </xpath>
+            <xpath expr="//field[@name='avg_cost']" position="attributes">
+                <attribute
+                    name="groups"
+                >product_cost_security.group_product_cost</attribute>
+            </xpath>
         </field>
     </record>
 </odoo>
