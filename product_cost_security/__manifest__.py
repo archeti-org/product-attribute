@@ -15,7 +15,7 @@
     "depends": ["product", "sale_margin"],
     "data": [
         "security/product_cost_security.xml",
-        "views/sale_order_views.xml"
-        "views/product_views.xml"
+        "views/sale_order_views.xml",
+        "views/product_views.xml",
     ],
 }
